@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabalho 2ºBimestre</title>
+</head>
+<body>
+  <h1>"1. Área do Terreno"</h1>
+
+  <label for="comprimento">Comprimento:</label>
+  <input type="number" id="comprimento" required>
+
+  <label for="largura">Largura:</label>
+  <input type="number" id="largura" required>
+
+  <button onclick="calcularArea()">R: =</button>
+  <div class="img">
+    <img src="https://img.freepik.com/fotos-gratis/lote-de-terreno-com-paisagem-natural-e-pino-de-localizacao_23-2149937924.jpg">
+  </div>
+  <div id="resultado1"></div>
+  <hr>
+
+    <style>
+    body {
+      background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB-EJviAPwvBN8WUsqSIIftnPoPmLKl8a9Bg&usqp=CAU);
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      padding: 20px;
+      color: #000000;
+    }
+    hr {
+	    width: 100%;
+      margin: 0;
+	    border: 2px solid; 
+	    border-color: red;
+	  }
+    h1 {
+      color: #0d089c;
+    }
+
+    .img {
+      position: relative;
+      size: 100px;
+      left: 40%;
+      width: 500px;   
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="number"] {
+      width: 80px;
+    }
+
+    button {
+      cursor: grabbing;
+      padding: 30px;
+      border-color:#d3d6d1;
+      border-radius: 33px;
+      border-bottom-width: 5px;
+      color:#ffffff;
+      background:linear-gradient(to bottom, #f705ff 10%, #000000 85%);
+      position: relative;
+}
+
+    #resultado1 {
+      color: red;
+      margin-top: 30px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    function calcularArea() {
+      var comprimento = document.getElementById("comprimento").value;
+      var largura = document.getElementById("largura").value;
+
+      var area = comprimento * largura;
+
+      document.getElementById("resultado1").innerHTML = "Área do terreno: " + area +  metrosquadrados;
+    }
+  </script>
+
+  <h1>"2. Numero de Ferraduras"</h1>
+
+  <label for="numeroCavalos">Numero de Cavalos:</label>
+  <input type="number" id="numeroCavalos" required>
+
+  <button onclick="calcularFerraduras()">R: =</button>
+  <div class="img2">
+    <img src="https://terceirotempo.uol.com.br/imagens/26/17/w750_h354_pdt_ft1_172617.webp">
+  </div>
+  <div id="resultado2"></div>
+  <hr>
+
+  <style>
+    .img2 {
+      position: relative;
+      size: 100px;
+      left: 40%;
+      width: 500px;   
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+
+    #resultado2 {
+      color: red;
+      margin-top: 30px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    function calcularFerraduras() {
+      var numeroCavalos = document.getElementById("numeroCavalos").value;
+      var quantidadeFerraduras = numeroCavalos * 4;
+
+      document.getElementById("resultado2") .innerHTML = "Ferraduras necessárias: "  + quantidadeFerraduras;
+    }
+  </script>
+
+  <h1>"3. Arrecadação da Padaria"</h1>
+
+  <label for="quantidadePao">Pão Frances:</label>
+  <input type="number" id="quantidadePao" required>
+
+  <label for="quantidadeBroa">Broas:</label>
+  <input type="number" id="quantidadeBroa" required>
+
+  <button onclick="calcularArrecadacao()">R: =</button>
+  <div class="img3">
+    <img src="https://jornadadogestor.com.br/wp-content/uploads/2018/12/como-montar-padaria.jpg">
+  </div>
+  <div id="resultado3"></div>
+  <hr>
+
+  <style>
+    .img3 {
+      position: relative;
+      size: 100px;
+      left: 40%;
+      width: 500px;   
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    #resultado3 {
+      color: red;
+      margin-top: 30px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    function calcularArrecadacao() {
+      var quantidadePao = document.getElementById("quantidadePao").value;
+      var quantidadeBroa = document.getElementById("quantidadeBroa").value;
+
+      var precoPao = 0.12;
+      var precoBroa = 1.50;
+
+      var totalPao = quantidadePao * precoPao;
+      var totalBroa = quantidadeBroa * precoBroa;
+
+      var totalArrecadado = totalPao + totalBroa;
+      var poupanca = totalArrecadado * 0.1;
+
+      document.getElementById("resultado3").innerHTML = "Arrecadação total foi de: R$ " + totalArrecadado.toFixed(2) + "<br>Foi Guardado na poupança: R$ " + poupanca.toFixed(2);
+    }
+  </script>
+
+  <h1>"4. Dias de Vida"</h1>
+
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" required>
+
+  <label for="idade">Idade:</label>
+  <input type="number" id="idade" required>
+
+  <button onclick="DiasdeVida()">R: =</button>
+  <div class="img4">
+    <img src="https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.3352553:1680209126/image.jpg?h=630&q=0.6&w=1200&$p$h$q$w=f76cc5e">
+  </div>
+  <div id="resultado4"></div>
+  <hr>
+
+  <style>
+    .img4 {
+      position: relative;
+      size: 100px;
+      left: 40%;
+      width: 500px;   
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    #resultado4 {
+      color: red;
+      margin-top: 30px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    function DiasdeVida() {
+      var nome = document.getElementById("nome").value;
+      var idade = document.getElementById("idade").value;
+
+      var diasdeVida = idade * 365;
+
+      document.getElementById("resultado4").innerHTML = nome.toUpperCase() + "Você esta vivo há " + diasdeVida + " DIAS.";
+    }
+  </script>
+
+  <h1>"5. Litros de Gasolina"</h1>
+
+  <label for="precodoLitro">Litro da Gasolina:</label>
+  <input type="number" id="precodoLitro" step="0.01" required>
+
+  <label for="valorPago">Valor Pago:</label>
+  <input type="number" id="valorPago" step="0.01" required>
+
+  <button onclick="Litros()">R: =</button>
+  <div class="img5">
+    <img src="https://www.contabeis.com.br/assets/img/news/estados-sugerem-reducao-em-23-centavos-para-a-aliquota-fixa-de-icms-da-gasolina.png">
+  </div>
+  <div id="resultado5"></div>
+  <hr>
+
+  <style>
+    .img5 {
+      position: relative;
+      size: 100px;
+      left: 40%;
+      width: 500px;   
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    #resultado5 {
+      color: red;
+      margin-top: 30px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    function Litros() {
+      var precodoLitro = document.getElementById("precodoLitro").value;
+      var valorPago = document.getElementById("valorPago").value;
+
+      var litros = valorPago / precodoLitro;
+
+      document.getElementById("resultado5").innerHTML = "Litros colocados no tanque: " + litros.toFixed(2);
+    }
+  </script>
+
+  <h1>"6. Restaurante a Quilo"</h1>
+
+  <label for="pesodoPrato">Peso do Prato(Kg):</label>
+  <input type="number" id="pesodoPrato" step="0.01" required>
+
+  <button onclick="Valor()">R: =</button>
+  <div class="img6">
+    <img src="https://s2.glbimg.com/yPA5BddqqgLNG025Kb1ecm4KFLs=/e.glbimg.com/og/ed/f/original/2016/10/27/menu-restaurant-vintage-table.jpg">
+  </div>
+  <div id="resultado6"></div>
+  <hr>
+
+  <style>
+    .img6 {
+      position: relative;
+      size: 100px;
+      left: 40%;
+      width: 500px;   
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    #resultado6 {
+      color: red;
+      margin-top: 30px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    function Valor() {
+      var pesodoPrato = document.getElementById("pesodoPrato").value;
+
+      var valorPagar = pesodoPrato * 12;
+
+      document.getElementById("resultado6").innerHTML = "VOCÊ PAGOU: R$ " + valorPagar.toFixed(2);
+    }
+  </script>
+
+  <h1>"7. Dias desde o Início do Ano"</h1>
+
+  <label for="dia">Dia:</label>
+  <input type="number" id="dia" min="1" max="31" required>
+
+  <label for="mes">Mês:</label>
+  <input type="number" id="mes" min="1" max="12" required>
+
+  <button onclick="calcularDias()">R: =</button>
+  <div class="img7">
+    <img src="https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.3303859:1669151336/Planejamento-para-2023.jpg?f=16x9&h=720&q=0.8&w=1280&$p$f$h$q$w=137c138">
+  </div>
+  <div id="resultado7"></div>
+  <hr>
+
+  <style>
+    .img7 {
+      position: relative;
+      size: 100px;
+      left: 40%;
+      width: 500px;   
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    #resultado7 {
+      color: red;
+      margin-top: 30px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    function calcularDias() {
+      var dia = document.getElementById("dia").value;
+      var mes = document.getElementById("mes").value;
+
+      var diasPassados = (mes - 1) * 30 + parseInt(dia);
+
+      document.getElementById("resultado7").innerHTML = "Dias passados desde o início do ano: " + diasPassados;
+    }
+  </script>
+
+  <h1>"8. Valor Arrecadado das Camisetas"</h1>
+
+  <label for="Pequenas">Pequenas:</label>
+  <input type="number" id="Pequenas" min="0" required>
+
+  <label for="Medias">Médias:</label>
+  <input type="number" id="Medias" min="0" required>
+
+  <label for="Grandes">Grandes:</label>
+  <input type="number" id="Grandes" min="0" required>
+
+  <button onclick="Valor()">R: =</button>
+  <div class="img8">
+    <img src="https://classic.exame.com/wp-content/uploads/2021/05/camiseta-simples-min.jpg?quality=70&strip=info&w=1024">
+  </div>
+  <div id="resultado8"></div>
+  <hr>
+
+  <style>
+    .img8 {
+      position: relative;
+      size: 100px;
+      left: 40%;
+      width: 500px;   
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    #resultado8 {
+      color: red;
+      margin-top: 30px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    function Valor() {
+      var Pequenas = document.getElementById("Pequenas").value;
+      var Medias = document.getElementById("Medias").value;
+      var Grandes = document.getElementById("Grandes").value;
+
+      var valorArrecadado = Pequenas * 10 + Medias * 12 + Grandes * 15;
+
+      document.getElementById("resultado8").innerHTML = "Valor arrecadado: R$ " + valorArrecadado.toFixed(2);
+    }
+  </script>
+
+  <h1>"9. Distância entre Dois Pontos"</h1>
+
+  <label for="x1">Ponto 1 - Marca X:</label>
+  <input type="number" id="x1" required>
+
+  <label for="y1">Ponto 1 - Marca Y:</label>
+  <input type="number" id="y1" required>
+
+  <label for="x2">Ponto 2 - Marca X:</label>
+  <input type="number" id="x2" required>
+
+  <label for="y2">Ponto 2 - Marca Y:</label>
+  <input type="number" id="y2" required>
+
+  <button onclick="calcularDistancia()">R: =</button>
+  <div class="img9">
+    <img src="https://static.mundoeducacao.uol.com.br/mundoeducacao/2019/10/1-plano-cartesiano.jpg">
+    </div>
+  <div id="resultado9"></div>
+  <hr>
+
+  <style>
+    .img9 {
+      position: relative;
+      size: 100px;
+      left: 40%;
+      width: 500px;   
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    #resultado9 {
+      color: red;
+      margin-top: 30px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    function calcularDistancia() {
+      var x1 = document.getElementById("x1").value;
+      var y1 = document.getElementById("y1").value;
+      var x2 = document.getElementById("x2").value;
+      var y2 = document.getElementById("y2").value;
+
+      var distancia = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+
+      document.getElementById("resultado9").innerHTML = "Distância entre os pontos: " + distancia.toFixed(2);
+    }
+  </script>
+
+  <h1>"10. Tempo de Trabalho"</h1>
+
+  <label for="dias">Tempo em dias de Trabalho:</label>
+  <input type="number" id="dias" required>
+
+  <button onclick="converterTempo()">R: =</button>
+  <div class="img10">
+    <img src="https://dorfmanncamino.com.br/wp-content/uploads/2021/02/rela%C3%A7%C3%A3o-de-trabalho-e-rela%C3%A7%C3%A3o-de-emprego-dorfmann-e-camino.jpg">
+  </div>
+  <div id="resultado10"></div>
+  <hr>
+
+  <style>
+    .img10 {
+      position: relative;
+      size: 100px;
+      left: 40%;
+      width: 500px;   
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    #resultado10 {
+      color: red;
+      margin-top: 30px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  </style>
+
+
+  <script>
+    function converterTempo() {
+      var dias = document.getElementById("dias").value;
+
+      var anos = Math.floor(dias / 365);
+      var meses = Math.floor((dias % 365) / 30);
+      var diasRestantes = dias % 365 % 30;
+
+      document.getElementById("resultado10").innerHTML = "Tempo de Trabalho: " + anos + " anos, " + meses + " meses e " + diasRestantes + " dias.";
+    }
+  </script>
+
+  <h1>"11. Aumento de Salário"</h1>
+
+  <label for="salario">Salário do Funcionário:</label>
+  <input type="number" id="salario" required>
+
+  <button onclick="calcularSalario()">R: =</button>
+  <div class="img11">
+    <img src="https://www.pontotel.com.br/wp-content/uploads/2022/10/salario-normativo.png">
+  </div>
+  <div id="resultado11"></div>
+  <hr>
+
+  <style>
+    .img11 {
+      position: relative;
+      size: 100px;
+      left: 40%;
+      width: 500px;   
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    #resultado11 {
+      color: red;
+      margin-top: 30px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    function calcularSalario() {
+      var salario = document.getElementById("salario").value;
+      var aumento = salario * 0.15;
+      var salarioComAumento = parseFloat(salario) + aumento;
+      var descontoImpostos = salarioComAumento * 0.08;
+      var salarioFinal = salarioComAumento - descontoImpostos;
+
+      document.getElementById("resultado11").innerHTML = "Salário Inicial: R$" + salario + "<br>"
+        + "Salário com Aumento: R$" + salarioComAumento.toFixed(2) + "<br>"
+        + "Salário Final: R$" + salarioFinal.toFixed(2);
+    }
+  </script>
+
+  <h1>"12. Imprimindo saida de Número"</h1>
+
+  <label for="numero">Número de até 3 digitos:</label>
+  <input type="number" id="numero" required>
+
+  <button onclick="imprimirNumero()">R: =</button>
+  <div class="img12">
+    <img src="https://images.tcdn.com.br/img/img_prod/601507/material_dourado_individual_111_pecas_educativo_pedagogico_jottplay_3065_1399_4_a83e994b32f3933c718bbf83d5e3607f.jpg">
+  </div>
+  <div id="resultado12"></div>
+  <hr>
+
+  <style>
+    .img12 {
+      position: relative;
+      size: 100px;
+      left: 40%;
+      width: 500px;   
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    #resultado12 {
+      color: red;
+      margin-top: 30px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    function imprimirNumero() {
+      var numero = document.getElementById("numero").value;
+      var centena = Math.floor(numero / 100);
+      var dezena = Math.floor((numero % 100) / 10);
+      var unidade = numero % 10;
+
+      document.getElementById("resultado12").innerHTML = "CENTENA = " + centena + " DEZENA = " + dezena + " UNIDADE = " + unidade;
+    }
+  </script>
+
+  <h1>"13. Área da Pizza"</h1>
+
+  <label for="raio">Raio:</label>
+  <input type="number" id="raio" required>
+
+  <button onclick="calcularArea()">R: =</button>
+  <div class="img13">
+    <img src="https://s2.static.brasilescola.uol.com.br/be/2022/03/numero-pi.jpg">
+  </div>
+  <div id="resultado13"></div>
+  <hr>
+
+  <style>
+    .img13 {
+      position: relative;
+      size: 100px;
+      left: 40%;
+      width: 500px;   
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    #resultado13 {
+      color: red;
+      margin-top: 30px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    function calcularArea() {
+
+      var raio = document.getElementById("raio").value;
+
+      var area = 3.14 * Math.pow(raio, 2);
+
+      document.getElementById("resultado13").innerHTML = "Área da Pizza: " + area.toFixed(2) + " unidades²";
+    }
+  </script>
+
+  <h1>"14. Dividindo a Conta"</h1>
+
+  <label for="total">Total da Conta:</label>
+  <input type="number" id="total" min="0" step="0.01">
+
+  <button onclick="calcularDivisao()">R: =</button>
+  <div class="img14">
+    <img src="https://thumbs.dreamstime.com/b/os-amigos-entregam-cerveja-bebendo-no-restaurante-do-bar-da-cervejaria-friendsh-117401883.jpg">
+  </div>
+  <div id="resultado14"></div>
+  <hr>
+
+  <style>
+    .img14 {
+      position: relative;
+      size: 100px;
+      left: 40%;
+      width: 500px;   
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    #resultado14 {
+      color: red;
+      margin-top: 30px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    function calcularDivisao() {
+      var total = parseFloat(document.getElementById("total").value);
+      var valorCarlos = Math.floor(total / 3);
+      var valorAndre = Math.floor(total / 3);
+      var valorFelipe = (total - (valorCarlos * 2)).toFixed(2);
+
+      document.getElementById("resultado14").innerHTML = "Carlos: R$" + valorCarlos + "<br>"
+        + "Andre: R$" + valorAndre + "<br>"
+        + "Felipe: R$" + valorFelipe;
+    }
+  </script>
+</body>
+</html>
